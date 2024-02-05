@@ -1,0 +1,27 @@
+.pass_item{
+    /* Display of component */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Sizes of component */
+    width: 100%;
+    height: 4vw;
+
+    /* Styles of component */
+    border: none;
+    background-color: aquamarine; /* TODO: to chose */
+    border-radius: 10px;
+    color: white; /* TODO: to chose */
+    font-size: 1.5vw;
+    box-shadow: 0 10px 10px -13px black;
+}
+
+.pass_item:hover{
+    background-color: #00FF00; /* TODO: to chose */
+}
+
+.pass_item:active{
+    background-color: #00AA00; /* TODO: to chose */
+    box-shadow: none;
+}
