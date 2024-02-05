@@ -40,4 +40,14 @@ export class DataManager{
         this.passwords.push(new Password(platform, password));
         this.saveData();
     }
+
+    changePassword(id, password){
+        this.passwords[id].password = password;
+        this.saveData();
+    }
+
+    deletePassword(id){
+        this.passwords.splice(id, 1);
+        this.saveData();
+    }
 };

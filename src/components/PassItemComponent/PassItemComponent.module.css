@@ -1,3 +1,7 @@
+.item{
+    width: 50%;
+}
+
 .pass_item{
     /* Display of component */
     display: flex;
@@ -23,5 +27,38 @@
 
 .pass_item:active{
     background-color: #00AA00; /* TODO: to chose */
+    box-shadow: none;
+}
+
+.pass_item__reset, .pass_item__delete{
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.pass_item__reset{
+    background-color: rgb(255, 224, 159);
+}
+
+.pass_item__reset:hover{
+    background-color: rgb(253, 200, 86);
+}
+
+.pass_item__reset:active{
+    background-color: rgb(255, 180, 20);
+    box-shadow: none;
+}
+
+.pass_item__delete{
+    background-color: rgb(255, 140, 140);
+}
+
+.pass_item__delete:hover{
+    background-color: rgb(255, 110, 110);
+}
+
+.pass_item__delete:active{
+    background-color: rgb(255, 15, 15);
     box-shadow: none;
 }

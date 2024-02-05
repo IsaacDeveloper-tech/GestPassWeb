@@ -18,8 +18,11 @@ function App() {
         passwords.map((password, index) => {
           return <PassItemComponent 
                     key={index} 
+                    id={index}
                     platform={password.platform} 
                     pass={password.password} 
+                    dataManager={dataManager}
+                    setPassword={setPassword}
                   />
         })
       }

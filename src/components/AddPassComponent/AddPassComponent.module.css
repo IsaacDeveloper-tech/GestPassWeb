@@ -1,0 +1,25 @@
+.add_pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1vw;
+}
+
+.add_pass__input{
+    width: 30%;
+    height: 4vw;
+    border:none;
+    box-shadow: 0 10px 12px -13px black;
+    border-radius: 10px;
+}
+
+.add_pass__button{
+    width: 10%;
+    height: 4vw;
+    border:none;
+    box-shadow: 0 10px 12px -13px black;
+    background-color: aquamarine;
+    border-radius: 10px;
+    color: white;
+}
