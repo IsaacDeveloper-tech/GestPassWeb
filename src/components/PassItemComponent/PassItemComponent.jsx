@@ -29,21 +29,32 @@ export function PassItemComponent({ id, platform, pass, dataManager, setPassword
 // Functions of component
 export function copyPasswordToClipboard(pass, setNotificationText, setNotificationType, setShowNotification)
 {
-    navigator.clipboard.writeText(pass)
-    .then(() => {
-        console.log('Password copied to clipboard');
-        setNotificationText("Password copied to clipboard");
-        setNotificationType(NOTIFICATION_TYPE.INFO);
-        setShowNotification(true);
-        return true;
-    })
-    .catch((err) => {
-        console.error('Failed to copy password to clipboard', err);
-        setNotificationText("Failed to copy password to clipboard");
+    if(navigator.clipboard !== undefined)
+    {
+        navigator.clipboard.writeText(pass)
+        .then(() => {
+            console.log('Password copied to clipboard');
+            setNotificationText("Password copied to clipboard");
+            setNotificationType(NOTIFICATION_TYPE.INFO);
+            setShowNotification(true);
+            return true;
+        })
+        .catch((err) => {
+            console.error('Failed to copy password to clipboard', err);
+            setNotificationText("Failed to copy password to clipboard");
+            setNotificationType(NOTIFICATION_TYPE.ERROR);
+            setShowNotification(true);
+            return false;
+        });
+    }
+    else
+    {
+        console.error('Clipboard API not available');
+        setNotificationText("Clipboard API not available");
         setNotificationType(NOTIFICATION_TYPE.ERROR);
         setShowNotification(true);
         return false;
-    });
+    }
 }
 
 export function deletePassword(id, dataManager, setPassword, setNotificationText, setNotificationType, setShowNotification)
