@@ -1,0 +1,47 @@
+.notificator{
+    position: fixed;
+    top: -50vw;
+    width: 60%;
+    height: 6vw;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px -13px black;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: top 0.5s;
+}
+
+.notificator_show{
+    top: 20px;
+    transition: top 0.5s;
+}
+
+.notificator_color{
+    position: relative;
+    background-color: aquamarine;
+    width: 3%;
+    height: 100%;
+}
+
+.notificator_color__info{
+    background-color: aquamarine;
+}
+
+.notificator_color__warning{
+    background-color: #FFD700;
+}
+
+.notificator_color__error{
+    background-color: #FF6347;
+}
+
+.notificator_text{
+    position: relative;
+    width: 97%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: lighter;
+}

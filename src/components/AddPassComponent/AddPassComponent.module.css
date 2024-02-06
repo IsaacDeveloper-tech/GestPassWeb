@@ -12,6 +12,9 @@
     border:none;
     box-shadow: 0 10px 12px -13px black;
     border-radius: 10px;
+    padding-left: 10px;
+    font-size: 1.5vw;
+    font-weight: lighter;
 }
 
 .add_pass__button{

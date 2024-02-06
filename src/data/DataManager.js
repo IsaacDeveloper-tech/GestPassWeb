@@ -8,8 +8,9 @@ export class Password {
 export class DataManager{
     constructor(){
         // Load data from local storage
+        this.keyData = "data";
         this.passwords = [];
-        let data = window.localStorage.getItem("data");
+        let data = window.localStorage.getItem(this.keyData);
         if(data !== null)
         {
             this.passwords = JSON.parse(data);
@@ -25,7 +26,7 @@ export class DataManager{
     }
 
     saveData(){
-        window.localStorage.setItem("data", JSON.stringify(this.passwords));
+        window.localStorage.setItem(this.keyData, JSON.stringify(this.passwords));
     }
 
     getPassword(id){
