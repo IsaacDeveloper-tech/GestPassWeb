@@ -22,11 +22,11 @@
 }
 
 .pass_item:hover{
-    background-color: #00FF00; /* TODO: to chose */
+    background-color: rgb(175, 255, 228); /* TODO: to chose */
 }
 
 .pass_item:active{
-    background-color: #00AA00; /* TODO: to chose */
+    background-color: rgb(65, 255, 192); /* TODO: to chose */
     box-shadow: none;
 }
 

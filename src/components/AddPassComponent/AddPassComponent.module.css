@@ -25,4 +25,14 @@
     background-color: aquamarine;
     border-radius: 10px;
     color: white;
+    font-size: 1em;
+}
+
+.add_pass__button:hover{
+    background-color: rgb(175, 255, 228);
+}
+
+.add_pass__button:active{
+    background-color: rgb(65, 255, 192);
+    box-shadow: none;
 }
